@@ -89,7 +89,14 @@
             <i class="fa fa-stack-overflow" title="Stackoverflow link"></i>
           </a>
         </li>
-      {%- endif -%}
+        {%- endif -%}
+        {%- if site.slideshare_username -%}
+        <li>
+          <a target="_blank" href="https://www.slideshare.net/{{ site.slideshare_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+            <i class="fa fa-slideshare" title="Slideshare link"></i>
+          </a>
+        </li>
+        {%- endif -%}
       </ul>
 
       {%- if site.email -%}
