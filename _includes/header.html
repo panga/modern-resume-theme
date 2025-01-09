@@ -112,8 +112,8 @@
         </p>
       {%- endif -%}
       {%- if site.phone -%}
-        <p>
-          <small>Phone: {{ site.phone | escape }}</small>
+        <p class="print-only">
+          <small>Phone: <b>{{ site.phone | escape }}</b></small>
         </p>
       {%- endif -%}
       {%- if site.blog -%}
