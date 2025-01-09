@@ -126,16 +126,16 @@
           <small>Website: {% include a.html href=site.website %}{{ site.website | escape }}</a></small>
         </p>
       {%- endif -%}
-      {%- if site.linkedin_username -%}
-      {% assign linkedin_href = "https://www.linkedin.com/in/" | append: site.linkedin_username %}
-        <p>
-          <small>LinkedIn: {% include a.html href=linkedin_href %}{{ linkedin_href }}</a></small>
-        </p>
-      {%- endif -%}
       {%- if site.github_username -%}
-      {% assign github_href = "https://github.com/" | append: site.github_username %}
+      {% assign github_href = "github.com/" | append: site.github_username %}
         <p>
           <small>GitHub: {% include a.html href=github_href %}{{ github_href }}</a></small>
+        </p>
+      {%- endif -%}
+      {%- if site.linkedin_username -%}
+      {% assign linkedin_href = "linkedin.com/in/" | append: site.linkedin_username %}
+        <p>
+          <small>LinkedIn: {% include a.html href=linkedin_href %}{{ linkedin_href }}</a></small>
         </p>
       {%- endif -%}
     </div>
