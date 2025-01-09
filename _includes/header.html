@@ -27,13 +27,13 @@
             </a>
           </li>
         {%- endif -%}
-        {%- if site.github_username -%}
+        <!-- {%- if site.github_username -%}
           <li>
             <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fa fa-github" title="Github link"></i>
             </a>
           </li>
-        {%- endif -%}
+        {%- endif -%} -->
         {%- if site.instagram_username -%}
           <li>
             <a target="_blank" href="https://www.instagram.com/{{ site.instagram_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
@@ -41,13 +41,13 @@
             </a>
           </li>
         {%- endif -%}
-        {%- if site.linkedin_username -%}
+        <!-- {%- if site.linkedin_username -%}
           <li>
             <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fa fa-linkedin" title="Linkedin link"></i>
             </a>
           </li>
-        {%- endif -%}
+        {%- endif -%} -->
         {%- if site.xing_username -%}
           <li>
             <a target="_blank" href="https://www.xing.com/profile/{{ site.xing_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
@@ -126,16 +126,16 @@
           <small>Website: {% include a.html href=site.website %}{{ site.website | escape }}</a></small>
         </p>
       {%- endif -%}
-      {%- if site.github_username -%}
-      {% assign github_href = "github.com/" | append: site.github_username %}
-        <p>
-          <small>GitHub: {% include a.html href=github_href %}{{ github_href }}</a></small>
-        </p>
-      {%- endif -%}
       {%- if site.linkedin_username -%}
       {% assign linkedin_href = "linkedin.com/in/" | append: site.linkedin_username %}
         <p>
           <small>LinkedIn: {% include a.html href=linkedin_href %}{{ linkedin_href }}</a></small>
+        </p>
+      {%- endif -%}
+      {%- if site.github_username -%}
+      {% assign github_href = "github.com/" | append: site.github_username %}
+        <p>
+          <small>GitHub: {% include a.html href=github_href %}{{ github_href }}</a></small>
         </p>
       {%- endif -%}
     </div>
