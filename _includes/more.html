@@ -2,7 +2,7 @@
   <h3>{{ site.more_title | default: "A Little More About Me" }}</h3>
   <div class="row clearfix">
     <div class="col-md-12">
-      {{ site.more_content | strip | markdownify }}
+      <small>{{ site.more_content | strip | markdownify }}</small>
     </div>
   </div>
 </div>

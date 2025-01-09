@@ -108,22 +108,34 @@
 
       {%- if site.email -%}
         <p>
-          Email: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
+          <small>Email: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a></small>
         </p>
       {%- endif -%}
       {%- if site.phone -%}
         <p>
-          Phone: {{ site.phone | escape }}
+          <small>Phone: {{ site.phone | escape }}</small>
         </p>
       {%- endif -%}
       {%- if site.blog -%}
         <p>
-          Blog: {% include a.html href=site.blog %}{{ site.blog | escape }}</a>
+          <small>Blog: {% include a.html href=site.blog %}{{ site.blog | escape }}</a></small>
         </p>
       {%- endif -%}
       {%- if site.website -%}
         <p>
-          Website: {% include a.html href=site.website %}{{ site.website | escape }}</a>
+          <small>Website: {% include a.html href=site.website %}{{ site.website | escape }}</a></small>
+        </p>
+      {%- endif -%}
+      {%- if site.linkedin_username -%}
+      {% assign linkedin_href = "https://www.linkedin.com/in/" | append: site.linkedin_username %}
+        <p>
+          <small>LinkedIn: {% include a.html href=linkedin_href %}{{ linkedin_href }}</a></small>
+        </p>
+      {%- endif -%}
+      {%- if site.github_username -%}
+      {% assign github_href = "https://github.com/" | append: site.github_username %}
+        <p>
+          <small>GitHub: {% include a.html href=github_href %}{{ github_href }}</a></small>
         </p>
       {%- endif -%}
     </div>
